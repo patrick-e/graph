@@ -1,5 +1,5 @@
 import pandas as pd
-import matplotlib
+import matplotlib as mt
 
 from agent import Agent
 
@@ -27,7 +27,8 @@ print(zawardomx)
 
 
 agent = Agent(zawardomx,(2,2),(6,5))
-agent.strategy('random')
+agent.strategy('bfs')
+
 #tasks
 #MUNDO:
     # criar matriz de 0 a 70 {concluido}
@@ -38,7 +39,7 @@ agent.strategy('random')
     #agente tem que ser capaz de encontrar o caminho com menos gastos
 #estrategia do agente:
     #o agente pode terá 3 estrategias 
-    # bfs: utilização de FIFO 
+    # bfs: utilização de FIFO {quase completo}
     # dfs: utilizando LIFO
     # a*: dfs e bfs 
     # djk (opcional) fds

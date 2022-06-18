@@ -37,12 +37,23 @@ class Agent():
             print(self.visited)    
             print(self.ef)
            
-
+    def bfs(self):
+        self.visited.append(self.start)
+        self.queue.append(self.start)
+        while self.queue:          
+            m = self.queue.pop(0) 
+            for j in self.moveset():
+                if j not in self.visited:
+                    self.visited.append(j[m])
+                    self.queue.append(self.moveset)
+        print(self.visited,"visited")
+        print(self.ef)
+               
     def strategy(self,strategy):
         ''' possible estrategy 'random','bfs',''dfs,'A*'
         '''
-        j = {'random':self.random()}
-        # {'bfs': self.bfs()},
+        j = [{'random':self.random()},
+        {'bfs': self.bfs()}]
         # {'A*': self.astar()},
         # {"dfs":self.dfs()}
 
